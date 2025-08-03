@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+body {
+  overflow-x: hidden;
+}
+
+.zoom-on-scroll {
+  animation-name: backZoom;
+  animation-timeline: scroll(root);
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes backZoom {
+  from {
+    transform: scale(1) translate(0);
+  }
+  to {
+    transform: scale(6) translate(8%, 3rem);
+  }
+}
