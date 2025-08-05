@@ -3,13 +3,17 @@
 import { useState, useEffect } from "react";
 
 import HomeBack from "../../public/home.png";
-import Header from "@/components/Header";
+import HeroBanner from "@/components/HeroBanner";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   
   return (
     <main>
-        <Header/>
+      <HeroBanner />
+      <About />
+      <Projects />
     </main>
   );
 }

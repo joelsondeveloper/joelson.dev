@@ -1,24 +1,132 @@
 @import "tailwindcss";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   overflow-x: hidden;
+  
 }
 
-.zoom-on-scroll {
-  animation-name: backZoom;
-  animation-timeline: scroll(root);
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  transform-origin: center;
+button {
+  cursor: pointer;
+  transition: .3s;
 }
 
-@keyframes backZoom {
-  from {
-    transform: scale(1) translate(0);
-  }
-  to {
-    transform: scale(6) translate(8%, 3rem);
-  }
+button:hover {
+  opacity: .8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  color: #F1B663;
+}
+
+.bg-azul {
+  background-color: #6366F1;
+}
+
+.bg-azul-escuro {
+  background-color: #0F172A;
+}
+
+.color-azul {
+  color: #6366F1;
+}
+
+.color-marinho {
+  color: #0EA5E9;
+}
+
+.color-azul-black {
+  color: #1F2937;
+}
+
+.bg-laranja {
+  background-color: #F1B663;
+}
+
+.bg-verde {
+  background-color: #10B981;
+}
+
+.gradient-azul-roxo {
+  background: linear-gradient(45deg, #0EA5E9, #8B5CF6);
+}
+
+.color-laranja {
+  color: #F1B663;
+}
+
+.color-azul-escuro {
+  color: #1F2937;
+}
+
+.bg-cinza {
+  background-color: #F3F4F6;
+}
+
+.color-cinza {
+  color: #6B7280;
+}
+
+.color-branco {
+  color: #E2E8F0;
+}
+
+.bg-home {
+  background-image: url("../../public/home.png");
+}
+
+.bg-transparente {
+  background-color: rgba(255, 255, 255, .4);
+}
+
+.bg-joelson {
+  background-image: url(../../public/joelson.jpg);
+}
+
+.btn-primary {
+  background-color: #F1B663;
+  padding: 1.125rem 2rem;
+  border-radius: .75rem;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  border-radius: .75rem;
+  background-color: transparent;
+  padding: 1.125rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  border: 2px solid #F1B663;
+  color: #F1B663;
+}
+
+.tech-icon {
+  aspect-ratio: 1/1;
+  border-radius: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+
+.tech-icon:hover {
+  scale: 1.03;
+}
+
+.tech-icon svg {
+  font-size: 1.5rem;
+}
+
+.transition-flip {
+  transition: transform .5s;
 }
