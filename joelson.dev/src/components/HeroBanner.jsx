@@ -32,8 +32,8 @@ const HeroBanner = () => {
             className="cta flex
             items-center gap-4"
           >
-            <button className="btn-primary">Ver Projetos</button>
-            <button className="btn-secondary">
+            <a href="#projects" className="btn-primary py-5 px-8 bg-laranja">Ver Projetos</a>
+            <button className="btn-secondary color-laranja px-5 py-4">
               <FiExternalLink />
               <span>Conectar</span>
             </button>

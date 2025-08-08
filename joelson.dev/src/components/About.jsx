@@ -46,6 +46,7 @@ const About = () => {
             /> */}
             {techs.map((tech) => (
               <Tech
+              key={tech.id}
               svg={<tech.icon size="2rem" />}
               color={tech.color}
               id={tech.id}

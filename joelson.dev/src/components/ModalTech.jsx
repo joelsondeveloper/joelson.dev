@@ -105,7 +105,7 @@ const ModalTech = ({ techId, closeModal }) => {
   }, [expert])
 
   return (
-    <article className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[30rem] aspect-[4/5] rounded-2xl overflow-hidden z-[1] perspective-1000">
+    <article className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[30rem] aspect-[4/5] rounded-2xl overflow-hidden perspective-1000 z-50">
       <div className="relative w-full h-full shadow-[0_20px_50px_black] ">
         <div
           className={`front bg-azul-escuro w-full h-full p-6 text-white flex flex-col gap-8 backface-hidden absolute inset-0 transition-flip ${
