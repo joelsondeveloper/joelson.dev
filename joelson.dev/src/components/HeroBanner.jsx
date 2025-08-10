@@ -8,7 +8,7 @@ import React from "react";
 
 const HeroBanner = () => {
   return (
-    <main className="w-screen min-h-screen bg-home bg-cover bg-bottom">
+    <main className="w-screen min-h-screen bg-home bg-cover bg-bottom mt-[56px]">
       <section className="hero-content flex flex-col lg:flex-row justify-between items-center px-8 py-16 gap-8">
         <div className="hero-text flex flex-col gap-8 max-w-[40rem] items-center text-center">
           <div className="headlines flex flex-col gap-4">

@@ -96,6 +96,10 @@ a:hover:not(.btn-primary) {
   background-color: rgba(255, 255, 255, .4);
 }
 
+.bg-0 {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .bg-joelson {
   background-image: url(../../public/joelson.jpg);
 }
@@ -163,4 +167,10 @@ a:hover:not(.btn-primary) {
 ::-webkit-scrollbar-thumb {
   background: #6366F1;
   border-radius: 9999px;
+}
+
+@media screen and (min-width: 640px) {
+  ul.bg-transparente {
+    background-color: transparent;
+  }
 }
