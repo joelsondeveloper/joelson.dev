@@ -16,6 +16,21 @@ const Header = () => {
     }
   }, []);
 
+  useEffect(() => {
+  const handleScroll = () => {
+    setIsOpen(false);
+  };
+
+  document.addEventListener("scroll", handleScroll);
+  document.addEventListener("click", handleScroll);
+
+  // cleanup pra evitar vazamento de evento
+  return () => {
+    document.removeEventListener("scroll", handleScroll);
+    document.removeEventListener("click", handleScroll);
+  };
+}, []);
+
   return (
     <header className="flex justify-between px-10 py-3 max-h-80 items-center fixed top-0 left-0 right-0 backdrop-blur-md bg-transparente z-10">
       <div className="header_logo flex gap-2 items-center font-bold">
