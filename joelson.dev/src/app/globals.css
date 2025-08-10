@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  width: 100%;
   overflow-x: hidden;
-  
+}
+
+li {
+  list-style: none;
 }
 
 button, .btn-primary, .btn-secondary {
@@ -36,6 +40,10 @@ a:hover:not(.btn-primary) {
   background-color: #0F172A;
 }
 
+.bg-preto {
+  background-color: #1F2937;
+}
+
 .color-azul {
   color: #6366F1;
 }
@@ -56,8 +64,8 @@ a:hover:not(.btn-primary) {
   background-color: #10B981;
 }
 
-.gradient-azul-roxo {
-  background: linear-gradient(45deg, #0EA5E9, #8B5CF6);
+.gradient {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
 }
 
 .color-laranja {
@@ -153,6 +161,6 @@ a:hover:not(.btn-primary) {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: #6366F1;
   border-radius: 9999px;
 }

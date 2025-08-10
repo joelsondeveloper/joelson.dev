@@ -9,8 +9,8 @@ import React from "react";
 const HeroBanner = () => {
   return (
     <main className="w-screen min-h-screen bg-home bg-cover bg-bottom">
-      <section className="hero-content flex justify-between items-center px-8 py-16">
-        <div className="hero-text flex flex-col gap-8 max-w-[40rem]">
+      <section className="hero-content flex flex-col lg:flex-row justify-between items-center px-8 py-16 gap-8">
+        <div className="hero-text flex flex-col gap-8 max-w-[40rem] items-center text-center">
           <div className="headlines flex flex-col gap-4">
             <p className="text-xl font-medium color-azul-escuro">Olá! Eu sou</p>
             <h2 className="text-[3rem] font-extrabold color-azul-escuro">
@@ -19,7 +19,7 @@ const HeroBanner = () => {
             <p className="text-[3rem] font-extrabold color-azul-escuro">
               apaixonado por criar
             </p>
-            <p className="pb-2 w-fit text-[3rem] font-extrabold color-laranja border-b-2">
+            <p className="pb-2 w-fit mx-auto text-[3rem] font-extrabold color-laranja border-b-2">
               experiências
             </p>
           </div>
@@ -32,14 +32,19 @@ const HeroBanner = () => {
             className="cta flex
             items-center gap-4"
           >
-            <a href="#projects" className="btn-primary py-5 px-8 bg-laranja">Ver Projetos</a>
+            <a href="#projects" className="btn-primary py-5 px-8 bg-laranja">
+              Ver Projetos
+            </a>
             <button className="btn-secondary color-laranja px-5 py-4">
               <FiExternalLink />
               <span>Conectar</span>
             </button>
           </div>
         </div>
-        <div className="hero-image min-w-[25rem] flex flex-col gap-[1.5rem]">
+        <div
+          className="hero-image flex-1 flex flex-col gap-[1.5rem]
+        items-center"
+        >
           <div className="avatar bg-joelson w-[17.5rem] aspect-square rounded-full bg-cover bg-bottom"></div>
           <div className="tech-stack-preview flex gap-4 w-[17.5rem] justify-between text-white">
             <Tech svg={<FaReact />} color="bg-laranja" id="react" size="3rem" />

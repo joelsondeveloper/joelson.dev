@@ -5,7 +5,7 @@ import Stat from "./Stat";
 
 const ModalProject = ({ setShowModal, data }) => {
   return (
-    <article className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[37.5rem] max-h-[37.5rem]
+    <article className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 md:w-[37.5rem] w-[21rem] max-h-[37.5rem]
     overflow-y-auto rounded-lg bg-white">
       <header className="px-6 pt-2 w-full flex justify-end items-center">
         <button
@@ -19,7 +19,7 @@ const ModalProject = ({ setShowModal, data }) => {
         <div className="title flex flex-col gap-2 items-center">
           <h2 className="font-bold text-2xl color-azul">{data.title}</h2>
           <div className="tags flex gap-1">
-            {data.tags.map((tag, index, array) => (
+            {data.tags.slice(0, 3).map((tag, index, array) => (
               <div key={tag} className="flex gap-1 items-center">
                 <span className="font-medium color-cinza">{tag}</span>
                 {array[index + 1] && (
@@ -62,7 +62,7 @@ const ModalProject = ({ setShowModal, data }) => {
           <h3 className="font-bold text-xl color-azul">
             Estatísticas do projeto
           </h3>
-          <ul className="flex gap-6">
+          <ul className="flex gap-6 flex-wrap">
             {data.stats.map((stat) => (
               <li key={stat.text}>
                 <Stat
@@ -93,7 +93,7 @@ const ModalProject = ({ setShowModal, data }) => {
           </a>
         </div>
         <div className="additional flex justify-center color-cinza text-sm">
-          <p>desenvolvido em {data.date}</p>
+          <p>Desenvolvido em {data.date}</p>
         </div>
       </div>
     </article>

@@ -16,8 +16,8 @@ const About = () => {
           Conheça um pouco da minha jornada e paixão pelo desenvolvimento
         </p>
       </header>
-      <div className="about-content flex justify-between">
-        <div className="about-text max-w-[37.5rem] flex flex-col gap-6 color-azul-black">
+      <div className="about-content flex justify-between items-center flex-col lg:flex-row gap-8">
+        <div className="about-text max-w-[37.5rem] flex flex-col gap-6 color-azul-black items-center">
           <p>
             Sou um desenvolvedor front-end júnior com foco em criar experiências
             digitais incríveis. Minha jornada começou com curiosidade sobre como
@@ -35,9 +35,9 @@ const About = () => {
             <Stat text="Dedicação" number={100} symbol="%" />
           </div>
         </div>
-        <div className="tech-icons max-w-[25rem] flex flex-col gap-6">
+        <div className="tech-icons max-w-[25rem] flex flex-col gap-6 items-center">
           <h3 className="font-semibold text-sm">Tecnologias que domino</h3>
-          <ul className="flex flex-wrap gap-6">
+          <ul className="flex flex-wrap gap-6 justify-center">
             {/* <Tech
               svg={<FaHtml5 size="2rem" />}
               color="text-orange-500"

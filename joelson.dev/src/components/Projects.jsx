@@ -10,7 +10,7 @@ const Projects = () => {
         <h2 className='font-bold text-4xl color-laranja'>Projetos em Destaque</h2>
         <p className='text-lg color-cinza'>Alguns dos meus trabalhos mais recentes e desafiadores</p>
       </header>
-      <div className="projects-grid flex gap-6">
+      <div className="projects-grid flex gap-6 flex-wrap justify-center">
         {projects.map((project) => (
           <Project key={project.title} data={project} />
         ))}

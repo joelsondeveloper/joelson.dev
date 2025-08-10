@@ -12,7 +12,11 @@ const Project = ({ data }) => {
         onClick={() => setShowModal(true)}
       >
         <div className="img h-[12rem] w-full">
-          <img src={data.image_url} alt="i" className="w-full h-full" />
+          <img
+            src={data.image_url}
+            alt="i"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="content flex flex-col gap-4 px-6 pt-6">
           <div className="info flex flex-col gap-3">
@@ -36,12 +40,19 @@ const Project = ({ data }) => {
               href={data.live_url}
               target="_blank"
               className="btn-primary px-6 bg-azul text-white flex items-center"
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
             >
               Ver Online
             </a>
             <a
-              href={data.github_url} target="_blank"
+              href={data.github_url}
+              target="_blank"
               className="btn-secondary px-4 py-3 color-cinza"
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
             >
               <FaGithub />
               <span>GitHub</span>
@@ -50,9 +61,14 @@ const Project = ({ data }) => {
         </div>
       </article>
       {showModal && <ModalProject setShowModal={setShowModal} data={data} />}
-      {showModal && (<div onClick={() => {
-        setShowModal(false)
-      }} className="fixed inset-0 bg-black opacity-10 z-40"></div>)}
+      {showModal && (
+        <div
+          onClick={() => {
+            setShowModal(false);
+          }}
+          className="fixed inset-0 bg-black opacity-10 z-40"
+        ></div>
+      )}
     </>
   );
 };

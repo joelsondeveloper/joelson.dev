@@ -6,6 +6,7 @@ import HomeBack from "../../public/home.png";
 import HeroBanner from "@/components/HeroBanner";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroBanner />
       <About />
       <Projects />
+      <Contact />
     </main>
   );
 }

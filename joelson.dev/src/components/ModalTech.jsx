@@ -105,14 +105,14 @@ const ModalTech = ({ techId, closeModal }) => {
   }, [expert])
 
   return (
-    <article className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[30rem] aspect-[4/5] rounded-2xl overflow-hidden perspective-1000 z-50">
+    <article className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[21rem] sm:w-[30rem] aspect-[4/5] rounded-2xl overflow-hidden perspective-1000 z-50">
       <div className="relative w-full h-full shadow-[0_20px_50px_black] ">
         <div
-          className={`front bg-azul-escuro w-full h-full p-6 text-white flex flex-col gap-8 backface-hidden absolute inset-0 transition-flip ${
+          className={`front bg-azul-escuro w-full h-full p-3 sm:p-6 text-white flex flex-col gap-4 sm:gap-8 backface-hidden absolute inset-0 transition-flip ${
             !expert && "rotate-y-180"
           }`}
         >
-          <header className="flex justify-end">
+          <header className="flex justify-end absolute sm:static right-3">
             <button
               onClick={() => closeModal()}
               className="w-8 aspect-square rounded-full border-2 flex items-center justify-center color-marinho"
@@ -120,11 +120,11 @@ const ModalTech = ({ techId, closeModal }) => {
               <FaTimes size="1rem" />
             </button>
           </header>
-          <div className="content flex flex-col gap-6 items-center my-[3rem]">
-            <div className="icon w-[5rem] aspect-square flex items-center justify-center gradient-azul-roxo rounded-full">
+          <div className="content flex flex-col gap-3 sm:gap-6 items-center mt-[.5rem] sm:my-[3rem]">
+            <div className="icon w-[3.5rem] sm:w-[5rem] aspect-square flex items-center justify-center gradient-azul-roxo rounded-full">
               <FaUserTie size="2.5rem" className="" />
             </div>
-            <div className="text flex flex-col gap-4">
+            <div className="text flex flex-col gap-2 sm:gap-4">
               <h2 className="text-center font-bold text-3xl">
                 {techInfo.name}
               </h2>
@@ -132,7 +132,7 @@ const ModalTech = ({ techId, closeModal }) => {
                 {techInfo.descPro}
               </p>
             </div>
-            <ul className="features flex flex-col gap-3">
+            <ul className="features flex flex-col gap-1 sm:gap-3">
               {techInfo.featuresPro.map((feature) => (
                 <li key={feature.icon} className="flex items-center gap-3">
                   <div
@@ -150,7 +150,7 @@ const ModalTech = ({ techId, closeModal }) => {
           </div>
           <footer className="">
             <button
-              className="mx-auto flex items-center h-[3rem] px-4 gradient-azul-roxo rounded-3xl gap-2"
+              className="mx-auto flex items-center h-[3rem] px-4 gradient rounded-3xl gap-2"
               onClick={() => setExpert(false)}
             >
               <span>mude para o modo Leigo</span>
@@ -159,11 +159,11 @@ const ModalTech = ({ techId, closeModal }) => {
           </footer>
         </div>
         <div
-          className={`back bg-white p-6 text-black flex flex-col gap-8 backface-hidden absolute inset-0 transition-flip  ${
+          className={`back bg-white p-3 sm:p-6 text-black flex flex-col gap-4 sm:gap-8 backface-hidden absolute inset-0 transition-flip  ${
             expert && "rotate-y-180"
           }`}
         >
-          <header className="flex justify-end">
+          <header className="flex justify-end absolute sm:static right-3">
             <button
               onClick={() => closeModal()}
               className="w-8 aspect-square rounded-full border-2 flex items-center justify-center text-black"
@@ -171,11 +171,11 @@ const ModalTech = ({ techId, closeModal }) => {
               <FaTimes size="1rem" />
             </button>
           </header>
-          <div className="content flex flex-col gap-6 items-center my-[3rem]">
-            <div className="icon w-[5rem] aspect-square flex items-center justify-center gradient-azul-roxo rounded-full">
+          <div className="content flex flex-col gap-3 sm:gap-6 items-center mt-[.5rem] sm:my-[3rem]">
+            <div className="icon w-[3.5rem] sm:w-[5rem] aspect-square flex items-center justify-center gradient-azul-roxo rounded-full">
               <FaUser size="2.5rem" className="" />
             </div>
-            <div className="text flex flex-col gap-4">
+            <div className="text flex flex-col gap-2 sm:gap-4">
               <h2 className="text-center font-bold text-3xl">
                 {techInfo.name}
               </h2>
@@ -183,7 +183,7 @@ const ModalTech = ({ techId, closeModal }) => {
                 {techInfo.descLeigo}
               </p>
             </div>
-            <ul className="features flex flex-col gap-3">
+            <ul className="features flex flex-col gap-1 sm:gap-3">
               {techInfo.featuresLeigo.map((feature) => (
                 <li key={feature.icon} className="flex items-center gap-3">
                   <div
@@ -201,7 +201,7 @@ const ModalTech = ({ techId, closeModal }) => {
           </div>
           <footer className="">
             <button
-              className="mx-auto flex items-center h-[3rem] px-4 gradient-azul-roxo rounded-3xl gap-2"
+              className="mx-auto flex items-center h-[3rem] px-4 gradient rounded-3xl gap-2"
               onClick={() => setExpert(true)}
             >
               <span>mude para o modo Profissional</span>
