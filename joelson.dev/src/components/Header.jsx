@@ -22,12 +22,11 @@ const Header = () => {
   };
 
   document.addEventListener("scroll", handleScroll);
-  document.addEventListener("click", handleScroll);
 
   // cleanup pra evitar vazamento de evento
   return () => {
     document.removeEventListener("scroll", handleScroll);
-    document.removeEventListener("click", handleScroll);
+    document.removeE
   };
 }, []);
 
@@ -66,7 +65,10 @@ ${isOpen ? "max-h-[20rem]" : "max-h-0 sm:max-h-full"}`}
         </ul>
         <div
           className="menu relative sm:hidden cursor-pointer w-6 aspect-square"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsOpen(!isOpen)
+          }}
         >
           <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[4px] bg-azul rounded-lg overflow-hidden"></span>
           <span className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[4px] bg-azul rounded-lg overflow-hidden"></span>
