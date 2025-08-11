@@ -48,6 +48,9 @@ px-10 sm:px-0 overflow-hidden transition-all duration-300 ease-in-out
 ${isOpen ? "max-h-[20rem]" : "max-h-0 sm:max-h-full"}`}
         >
           <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
             <a href="#about">Sobre</a>
           </li>
           <li>
@@ -56,12 +59,12 @@ ${isOpen ? "max-h-[20rem]" : "max-h-0 sm:max-h-full"}`}
           <li>
             <a href="#contact">Contato</a>
           </li>
-          <li
+          {/* <li
             className="flex items-center justify-center rounded-full w-8 aspect-square bg-cinza ml-auto"
             onClick={() => setIsDark(!isDark)}
           >
             <FaSun color="#6B7280" />
-          </li>
+          </li> */}
         </ul>
         <div
           className="menu relative sm:hidden cursor-pointer w-6 aspect-square"
